@@ -1,0 +1,147 @@
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+:root {
+  --acom-color: #e01111;
+  --btn-hover: #e0111187;
+  --white: #ffffff;
+  --gray: #00000070;
+  --black: #000000;
+}
+
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 25px;
+
+  background-color: var(--acom-color);
+}
+
+.logo-americanas {
+  max-width: 250px;
+}
+
+#nav-bar h1 {
+  font-family: "Roboto", sans-serif;
+  font-size: 64px;
+
+  color: var(--white);
+}
+
+#mainContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vh;
+  height: 100vw;
+
+  background-image: url("../assets/background.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 95px 68px 81px;
+  border-radius: 10px;
+
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 8px 53px var(--black);
+  font-family: "Public Sans", sans-serif;
+
+  background: var(--white);
+}
+
+.card h1,
+#user-name {
+  margin: 0 0 52px 0;
+  line-height: 31px;
+}
+
+.card h1 {
+  font-size: 31px;
+}
+
+.card p {
+  color: rgba(0, 0, 0, 0.6);
+  margin: 0 0 37px 0;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#user-name,
+#password {
+  height: 34px;
+  border: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+#user-name {
+  background-image: url(../assets/user.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+#password {
+  background-image: url(../assets/visibility-off.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+input:active {
+  height: 34px;
+  border: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+input::placeholder {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+.btn-login {
+  padding: 15px 60px;
+  margin: 110px 0 17.78px 0;
+  width: 288.09px;
+  height: 51.22px;
+  border-radius: 10px;
+
+  cursor: pointer;
+
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  font-size: 15px;
+
+  background-color: var(--acom-color);
+  color: var(--white);
+}
+
+.btn-login:hover {
+  background-color: var(--btn-hover);
+  transition: 0.1s;
+}
+
+.links {
+  color: rgba(0, 0, 0, 0.6);
+  line-height: 21px;
+}
+
+.links:hover {
+  color: var(--acom-color);
+  transition: 0.1s;
+}

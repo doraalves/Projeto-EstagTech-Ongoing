@@ -1,0 +1,49 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="{% static 'login/styles/style.css' %}" />
+    <title>Login</title>
+  </head>
+  <body>
+    <header id="nav-bar">
+      <img
+        class="logo-americanas"
+        src="{% static 'login/assets/logo.png' %}"
+        alt=""
+      />
+      <h1>Ongoing</h1>
+    </header>
+    <main id="mainContainer">
+      <div class="card">
+        <h1>Login</h1>
+        <p>Por favor preencha o dados abaixo para começar!</p>
+        <input
+          type="text"
+          placeholder="Usuário"
+          name="user-name"
+          id="user-name"
+        />
+        <input type="text" placeholder="Senha" name="password" id="password" />
+        <a href="http://127.0.0.1:8000/login/painel/">
+          <button class="btn-login">Entrar</button>
+        </a>
+        <a class="links" href="/"> Esqueceu a senha? Clique aqui </a>
+      </div>
+    </main>
+  </body>
+</html>
