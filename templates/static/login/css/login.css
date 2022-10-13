@@ -1,0 +1,151 @@
+/* font-family: 'Public Sans', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+body{
+    overflow: hidden;
+    height: 100vh;
+}
+
+:root{
+    --acom-color: #E01111;
+    --text-button-color: #FFFFFF;
+    --title-color-black: #000000;
+    --text-color-gray: #00000070;
+}
+
+/* Header container */
+#navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color: var(--acom-color);
+}
+
+#navbar{
+    padding: 25px;
+}
+
+.americanasLogo {
+    max-width: 250px;
+}
+
+#navbar h1{
+    font-size: 36px;
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-button-color);
+}
+
+/* Main container */
+
+#main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/background.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.card{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 95px 68px 81px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 8px 53px #000000;
+    border-radius: 10px;
+    font-family: 'Public Sans', sans-serif;
+}
+
+.card h1, #username{
+    margin-bottom: 52px;
+    line-height: 31px;
+}
+
+.card h1{
+    font-size: 31px;
+}
+
+.card p{
+    color: rgba(0, 0, 0, 0.6);
+    margin-bottom: 37px;
+    font-size: 18px;
+    line-height: 21px;
+}
+
+#password{
+    margin-bottom: 110px;
+}
+
+#username, #password{
+    height: 34px;
+    border: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+input:active{
+    height: 34px;
+    border: transparent;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+input::placeholder{
+    font-size: 18px;
+    line-height: 21px;
+}
+
+#username{
+    background-image: url(../img/person.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+#password{
+    background-image: url(../img/visibilityOff.svg);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.btnLogin{
+    color: var(--text-button-color);
+    padding: 15px 60px;
+    margin-bottom: 17px;
+    background: var(--acom-color);
+    border: transparent;
+    text-transform: uppercase;
+    border-radius: 10px;
+    font-size: 15px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+}
+
+
+.btnLogin:hover{
+    background-color: #e0111187;
+    transition: 0.1s;
+}
+
+.links{
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.6);
+    line-height: 21px;
+}
+
+.links:hover{
+    color: var(--acom-color);
+    transition: 0.1s;
+}
