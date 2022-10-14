@@ -28,13 +28,10 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 25px;
+    padding: 15px;
     background-color: var(--acom-color);
 }
 
-#navbar{
-    padding: 25px;
-}
 
 .americanasLogo {
     max-width: 250px;
@@ -85,6 +82,11 @@ body{
     margin-bottom: 37px;
     font-size: 18px;
     line-height: 21px;
+}
+
+.formlogin{
+    display: flex;
+    flex-direction: column;
 }
 
 #password{
