@@ -1,33 +1,53 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{% static 'login/css/login.css' %}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'login/css/login.css' %}" />
     <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Roboto:wght@500&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Public+Sans&family=Roboto:wght@500&display=swap"
+      rel="stylesheet"
+    />
     <title>Login</title>
-</head>
-<body>
+  </head>
+  <body>
     <header id="navbar">
-        <img class="americanasLogo" src="{% static 'login/img/americanasLogo.svg' %}" alt="">
-        <h1>Ongoing</h1>
+      <img
+        class="americanasLogo"
+        src="{% static 'login/img/americanasLogo.svg' %}"
+        alt=""
+      />
+      <h1>Ongoing</h1>
     </header>
     <main id="main">
-        <div class="card">
-            <h1>Login</h1>
-            <p> Por favor preencha o dados abaixo para começar!</p>
-            <form class="formlogin" action="{% url 'login' %}" method="POST">{% csrf_token%}
-                <input type="email" name="username" id="username" placeholder="Usuário">
-                <input type="password" name="password" id="password" placeholder="Senha">
-                <input class="btnLogin" type="submit" value="Entrar">
-            </form>
-        </div>
-    </main>
+      <div class="card">
+        <h1>Login</h1>
+        <p>Por favor preencha o dados abaixo para começar!</p>
 
-</body>
+        <!-- <form class="formlogin" action="{% url 'login' %}" method="POST">{% csrf_token%} -->
+
+        <form class="formlogin" method="POST">
+          {% csrf_token%}
+          <input
+            type="email"
+            name="username"
+            id="username"
+            placeholder="Usuário"
+          />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Senha"
+          />
+          <input class="btnLogin" type="submit" value="Entrar" />
+        </form>
+      </div>
+    </main>
+  </body>
 </html>
