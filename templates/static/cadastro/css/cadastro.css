@@ -1,0 +1,135 @@
+/* font-family: 'Public Sans', sans-serif; */
+/* font-family: 'Roboto', sans-serif; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+}
+
+body {
+  overflow: hidden;
+  height: 100vh;
+}
+
+:root {
+  --acom-color: #e01111;
+  --text-button-color: #ffffff;
+  --title-color-black: #000000;
+  --text-color-gray: #00000070;
+}
+
+/* Header container */
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  background-color: var(--acom-color);
+}
+
+#nav-bar {
+  padding: 25px;
+}
+
+.americanasLogo {
+  max-width: 250px;
+}
+
+#nav-bar h1 {
+  font-size: 36px;
+  font-family: "Roboto", sans-serif;
+  color: var(--text-button-color);
+}
+
+/* Main container */
+
+#main-cad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(../img/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.card-cad {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 95px 68px 81px;
+  background: #ffffff;
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.1), 0px 8px 53px #000000;
+  border-radius: 10px;
+  font-family: "Public Sans", sans-serif;
+}
+
+.card-cad h1 {
+  margin-bottom: 58px;
+  line-height: 31px;
+  font-size: 31px;
+}
+
+.card-cad p {
+  color: rgba(0, 0, 0, 0.6);
+  margin-bottom: 81px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+/* #password {
+  margin-bottom: 110px;
+} */
+
+#name,
+#responsibility,
+#email,
+#password,
+#confirm-password {
+  margin-bottom: 41px;
+  width: 340px;
+  height: 34px;
+  /* gap: 41px; */
+  border: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+input:active {
+  height: 34px;
+  border: transparent;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.44);
+}
+
+input::placeholder {
+  font-size: 18px;
+  line-height: 21px;
+}
+
+#password,
+#confirm-password {
+  background-image: url(../img/visibilityOff.svg);
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.btnCad {
+  color: var(--text-button-color);
+  padding: 15px 60px;
+  margin: 52px 0 17px;
+  background: var(--acom-color);
+  border: transparent;
+  text-transform: uppercase;
+  border-radius: 10px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+}
+
+.btnCad:hover {
+  background-color: #e0111187;
+  transition: 0.1s;
+}
