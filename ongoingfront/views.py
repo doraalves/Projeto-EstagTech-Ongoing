@@ -1,6 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse
-from django.contrib.auth import authenticate
+# from django.http import HttpResponse
+# from django.contrib.auth import authenticate
 
 def ver_login(request):
     # if request.method == "GET":
@@ -13,8 +13,7 @@ def ver_login(request):
 
     #     if user:
     #         return HttpResponse("autenticado")
-    #     else:
-    #         return HttpResponse("Email ou senha invalido")
+    #     return HttpResponse("Email ou senha invalido")
 
 
 def ver_painel(request):
