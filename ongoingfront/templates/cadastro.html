@@ -31,10 +31,10 @@
 
         <form class="card-form" action="{% url 'ver_cadastro' %}" method="POST">
           {% csrf_token %}
-          <input type="text" name="name" id="name" placeholder="Nome" />
+          <input type="text" name="username" id="name" placeholder="Nome" />
           <input
             type="text"
-            name="responsibility"
+            name="respon"
             id="responsibility"
             placeholder="Cargo"
           />

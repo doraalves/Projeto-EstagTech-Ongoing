@@ -9,17 +9,16 @@ def ver_cadastro(request):
     if request.method == "GET":
         return render(request, 'cadastro.html')
     else:
-        username = request.POST.get('name')
-        respon = request.POST.get('responsibility')
+        username = request.POST.get('username')
         email = request.POST.get('email')
         password = request.POST.get('password')
 
-        user = User.objects.filter(name=username).first()
+        user = User.objects.filter(username=username).first()
 
         if user:
             return HttpResponse('Esse usuário ja existe')
         
-        user = User.objects.create_user(name=username, responsibility=respon, email=email, password=password)
+        user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
         return HttpResponse('Usuário cadastrado com sucesso')
         
