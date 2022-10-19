@@ -2,6 +2,8 @@ from django.http.response import HttpResponse
 from django.shortcuts import render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
+from django.contrib.auth import login as login_django
+from django.contrib.auth.decorators import login_required
 
 from ongoingfront.models import Usuario
 
@@ -24,18 +26,21 @@ def ver_cadastro(request):
         
 
 def ver_login(request):
-    # if request.method == "GET":
+    if request.method == "GET":
         return render(request, 'login.html')
-    # else:
-    #     email = request.POST.get("email")
-    #     senha = request.POST.get("senha")
+    else:
+        username = request.POST.get("username")
+        password = request.POST.get("password")
 
-    #     user = authenticate(email=email, password=senha)
+        user = authenticate(username=username, password=password)
 
-    #     if user:
-    #         return HttpResponse("autenticado")
-    #     return HttpResponse("Email ou senha invalido")
+        if user:
+            login_django(request, user)
+
+            return render(request, 'painel.html')
+        return HttpResponse("Email ou senha invalido")
 
 
+@login_required(login_url='/ongoingfront/login/')
 def ver_painel(request):
     return render(request, 'painel.html')
