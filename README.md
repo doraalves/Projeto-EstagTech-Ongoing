@@ -8,6 +8,6 @@ Tela de login e painel para controle de status de funcionários.
 
 2. Caminho para acesso do painel - http://127.0.0.1:8000/ongoingfront/painel/
 
-3. Caminho para acesso ao cadastro de usuários -
+3. Caminho para acesso ao cadastro de usuários - http://127.0.0.1:8000/ongoingfront/cadastro/
 
 4. Caminho para acessar o projeto - http://127.0.0.1:8000/ongoingfront/login/

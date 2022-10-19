@@ -28,29 +28,35 @@
       <div class="card-cad">
         <h1>Cadastro</h1>
         <p>Por favor preencha o dados abaixo para começar!</p>
-        <input type="text" name="name" id="name" placeholder="Nome" />
-        <input
-          type="text"
-          name="responsibility"
-          id="responsibility"
-          placeholder="Cargo"
-        />
-        <input type="email" name="email" id="email" placeholder="E-mail" />
-        <input
-          type="password"
-          name="password"
-          id="password"
-          placeholder="Senha"
-        />
-        <input
-          type="password"
-          name="confirm-password"
-          id="confirm-password"
-          placeholder="Confirmar Senha"
-        />
-        <a href="http://127.0.0.1:8000/ongoingfront/painel/"
-          ><button class="btnCad">Cadastrar</button></a
-        >
+
+        <form class="card-form" action="{% url 'ver_cadastro' %}" method="POST">
+          {% csrf_token %}
+          <input type="text" name="name" id="name" placeholder="Nome" />
+          <input
+            type="text"
+            name="responsibility"
+            id="responsibility"
+            placeholder="Cargo"
+          />
+          <input type="email" name="email" id="email" placeholder="E-mail" />
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="Senha"
+          />
+          <input
+            type="password"
+            name="confirm-password"
+            id="confirm-password"
+            placeholder="Confirmar Senha"
+          />
+          <!-- <a href="http://127.0.0.1:8000/ongoingfront/painel/"
+            ><button class="btnCad">Cadastrar</button></a
+          > -->
+          <!-- Botão de Teste -->
+          <input type="submit" value="cadastrar" />
+        </form>
       </div>
     </main>
   </body>
