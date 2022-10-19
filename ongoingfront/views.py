@@ -39,6 +39,6 @@ def ver_login(request):
         return HttpResponse("Email ou senha invalido")
 
 
-@login_required(login_url='/ongoingfront/login/')
+@login_required
 def ver_painel(request):
     return render(request, 'painel.html')
