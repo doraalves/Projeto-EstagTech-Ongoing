@@ -1,9 +1,12 @@
+from pickletools import read_unicodestring1
+from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import redirect, render
 from django.contrib.auth.models import User
 from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
+from django.contrib import messages
 
 def ver_cadastro(request):
     if request.method == "GET":
@@ -34,10 +37,10 @@ def ver_login(request):
 
         if user:
             login_django(request, user)
-
-            return render(request, 'painel.html')
-        return HttpResponse("Email ou senha invalido")
-
+            return redirect('/painel')
+        else:
+            messages.error(request, 'Usuário ou senha incorreto!')
+    return HttpResponseRedirect('http://127.0.0.1:8000/')
 
 @login_required
 def ver_painel(request):

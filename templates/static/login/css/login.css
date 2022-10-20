@@ -43,6 +43,16 @@ body{
     color: var(--text-button-color);
 }
 
+/* Alert */
+
+.alertUser{
+    background-color: red;
+    color: white;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
 /* Main container */
 
 #main{

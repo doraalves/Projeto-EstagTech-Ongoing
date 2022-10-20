@@ -26,8 +26,14 @@
       />
       <h1>Ongoing</h1>
     </header>
+    
     <main id="main">
       <div class="card">
+        <div class="alerts">
+          {% for msg in messages%}
+            <h2 class="alertUser">{{ msg }}</h2>
+          {% endfor %}
+        </div>
         <h1>Login</h1>
         <p>Por favor preencha o dados abaixo para começar!</p>
 
