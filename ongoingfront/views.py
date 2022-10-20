@@ -42,6 +42,6 @@ def ver_login(request):
             messages.error(request, 'Usuário ou senha incorreto!')
     return HttpResponseRedirect('http://127.0.0.1:8000/')
 
-@login_required
+@login_required(login_url='/')
 def ver_painel(request):
     return render(request, 'painel.html')
