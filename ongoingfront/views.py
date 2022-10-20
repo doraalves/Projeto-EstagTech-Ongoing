@@ -19,11 +19,14 @@ def ver_cadastro(request):
         user = User.objects.filter(username=username).first()
 
         if user:
-            return HttpResponse('Esse usuário ja existe')
+            messages.error(request, 'Usuário já possui cadastro!')
+            return HttpResponseRedirect('http://127.0.0.1:8000/cadastro')
         
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
-        return HttpResponse('Usuário cadastrado com sucesso')
+        messages.success(request, 'Usuário cadastrado com sucesso! Faça login abaixo')
+        return HttpResponseRedirect('http://127.0.0.1:8000/')
+        
         
 
 def ver_login(request):

@@ -28,18 +28,23 @@
     </header>
     <main id="main-cad">
       <div class="card-cad">
+        <div class="alerts">
+          {% for msg in messages%}
+            <h2 class="alertCadast">{{ msg }}</h2>
+          {% endfor %}
+        </div>
         <h1>Cadastro</h1>
         <p>Por favor preencha o dados abaixo para começar!</p>
 
         <form class="card-form" action="{% url 'ver_cadastro' %}" method="POST">
           {% csrf_token %}
           <input type="text" name="username" id="name" placeholder="Nome" />
-          <input
+          <!-- <input
             type="text"
             name="respon"
             id="responsibility"
             placeholder="Cargo"
-          />
+          /> -->
           <input type="email" name="email" id="email" placeholder="E-mail" />
           <input
             type="password"
