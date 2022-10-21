@@ -37,7 +37,7 @@
         </div>
         <div class="userDetails">
           <h1>{{ user.get_username }}</h1>
-          <h3>Analista III</h3>
+          <h3>Dev</h3>
         </div>
       </div>
       <div class="userStatus">
@@ -78,7 +78,7 @@
           <h1>Turnos</h1>
           <img
             class="acomRedLogo"
-            src="{% static 'painel/img/userTurn.svg' %}"
+            src="{% static 'painel/img/turn/t2.svg' %}"
             alt=""
           />
           <img
@@ -138,10 +138,11 @@
         <h2>Visão Geral - <span>21 Analistas</span></h2>
       </div>
       <div class="cardsUsers">
+        {% for user in list_t1 %}
         <div class="card">
           <img
             class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
+            src="{% static 'painel/img/status/off.svg' %}"
             alt=""
           />
           <img
@@ -149,219 +150,10 @@
             src="{% static 'painel/img/redCircle.svg' %}"
             alt=""
           />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
+          <h1>{{ user.nome }}</h1>
+          <h3>{{ user.turno }}</h3>
         </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
-        <div class="card">
-          <img
-            class="flagStatus"
-            src="{% static 'painel/img/status-Perfil.svg' %}"
-            alt=""
-          />
-          <img
-            class="imageUser"
-            src="{% static 'painel/img/redCircle.svg' %}"
-            alt=""
-          />
-          <h1>Nome Analista</h1>
-          <h3>Turno</h3>
-        </div>
+        {% endfor %}
       </div>
     </main>
   </body>

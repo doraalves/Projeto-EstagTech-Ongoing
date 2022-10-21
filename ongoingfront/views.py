@@ -1,3 +1,4 @@
+from multiprocessing import context
 from pickletools import read_unicodestring1
 from django.http import HttpResponseRedirect
 from django.http.response import HttpResponse
@@ -7,6 +8,8 @@ from django.contrib.auth import authenticate
 from django.contrib.auth import login as login_django
 from django.contrib.auth.decorators import login_required
 from django.contrib import messages
+
+from ongoingfront.models import Usuario
 
 def ver_cadastro(request):
     if request.method == "GET":
@@ -23,6 +26,8 @@ def ver_cadastro(request):
         
         user = User.objects.create_user(username=username, email=email, password=password)
         user.save()
+
+
         return HttpResponse('Usuário cadastrado com sucesso')
         
 
@@ -44,4 +49,13 @@ def ver_login(request):
 
 @login_required(login_url='/')
 def ver_painel(request):
-    return render(request, 'painel.html')
+    
+    # print(Usuario.objects.filter(turno="T1")[0].nome)
+
+    list_t1 = Usuario.objects.all()
+
+    context = {
+        'list_t1': list_t1
+    }
+
+    return render(request, 'painel.html', context)
